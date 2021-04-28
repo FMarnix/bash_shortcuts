@@ -1,0 +1,39 @@
+#Start Xampp
+
+	sudo /opt/lampp/lampp start
+	
+#Stop Xampp
+
+	sudo /opt/lampp/lampp stop
+
+#Stop the server
+
+	sudo /etc/init.d/apache2 stop
+
+#Add a GUI control panel
+
+	sudo gedit ~/.local/share/applications/xampp-control-panel.desktop
+
+#On gedit past
+
+	[Desktop Entry]
+	Comment=Start and Stop XAMPP
+	Name=XAMPP Control Panel
+	Exec=sudo -i python /opt/lampp/share/xampp-control-panel/xampp-control-panel.py
+	Icon=/usr/share/icons/Humanity/devices/24/network-wired.svg
+	Encoding=UTF-8
+	Terminal=false
+	Name=XAMPP Control Panel
+	Comment=Start and Stop XAMPP
+	Type=Application
+	Icon=/usr/share/icons/Humanity/devices/24/network-wired.svg
+	
+#install GKSU if needed
+
+	sudo apt-get install gksu
+	
+	*replace sudo -i on 3 line of the code above
+	
+#To start the control panel in 64 systems
+
+	sudo /opt/lampp/manager-linux-x64.run
